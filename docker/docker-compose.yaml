@@ -81,7 +81,7 @@ services:
     image: mysql:8.0.37
     restart: on-failure
     environment:
-      MYSQL_ROOT_PASSWORD: infiniflow
+      MYSQL_ROOT_PASSWORD: infini_rag_flow
       MYSQL_DATABASE: rag_flow
       MYSQL_USER: ragflow
       MYSQL_PASSWORD: infini_rag_flow
