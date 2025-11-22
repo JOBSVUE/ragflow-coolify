@@ -42,8 +42,8 @@ services:
       REGISTER_ENABLED: "1"
     # If you want Coolify to manage HTTP via its reverse proxy, you can omit ports.
     # For direct host access, uncomment the line below.
-    # ports:
-    #   - "8080:80"
+    ports:
+      - "8580:80"
     volumes:
       - ragflow-logs:/ragflow/logs
     depends_on:
