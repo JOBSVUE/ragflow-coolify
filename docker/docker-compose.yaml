@@ -5,6 +5,7 @@ services:
     image: infiniflow/ragflow:v0.20.4-slim
     restart: on-failure
     environment:
+      SERVICE_URL_RAGFLOW_80:
       TZ: UTC
       # Optional HF mirror (uncomment if needed)
       # HF_ENDPOINT: https://hf-mirror.com
@@ -42,8 +43,8 @@ services:
       REGISTER_ENABLED: "1"
     # If you want Coolify to manage HTTP via its reverse proxy, you can omit ports.
     # For direct host access, uncomment the line below.
-    ports:
-      - "8580:80"
+    #ports:
+    #  - "8080:80"
     volumes:
       - ragflow-logs:/ragflow/logs
     depends_on:
